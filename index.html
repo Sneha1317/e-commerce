@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>ShopEasy - E-Commerce</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <nav>
+
+        <h2>ShopEasy</h2>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#products">Products</a>
+
+            <button onclick="openCart()">
+                🛒 Cart
+                <span id="cartCount">0</span>
+            </button>
+        </div>
+
+    </nav>
+
+
+    <!-- Hero -->
+
+    <section id="home" class="hero">
+
+        <div>
+
+            <h1>Welcome to ShopEasy</h1>
+
+            <p>
+                Find the products you need
+                in one place.
+            </p>
+
+            <a href="#products">
+                <button>Shop Now</button>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Products -->
+
+    <section id="products">
+
+        <h2>Our Products</h2>
+
+
+        <!-- Search -->
+
+        <input
+            type="text"
+            id="search"
+            placeholder="Search products..."
+        >
+
+
+        <!-- Categories -->
+
+        <div class="categories">
+
+            <button onclick="filterProducts('All')">
+                All
+            </button>
+
+            <button onclick="filterProducts('Electronics')">
+                Electronics
+            </button>
+
+            <button onclick="filterProducts('Clothing')">
+                Clothing
+            </button>
+
+            <button onclick="filterProducts('Books')">
+                Books
+            </button>
+
+        </div>
+
+
+        <!-- Product Container -->
+
+        <div id="productContainer"
+             class="product-container">
+        </div>
+
+    </section>
+
+
+    <!-- Cart -->
+
+    <div id="cartPanel" class="cart-panel">
+
+        <div class="cart-header">
+
+            <h2>Your Cart</h2>
+
+            <button onclick="closeCart()">
+                ✕
+            </button>
+
+        </div>
+
+
+        <div id="cartItems"></div>
+
+
+        <div class="cart-total">
+
+            <h3>
+                Total:
+                ₹<span id="cartTotal">0</span>
+            </h3>
+
+            <button onclick="checkout()">
+                Checkout
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            © 2026 ShopEasy
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
